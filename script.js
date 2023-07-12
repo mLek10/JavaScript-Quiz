@@ -13,15 +13,29 @@
 const questions = [
     {
         question: "What does JS stand for?",
-        choices: ["JavaScript", "JavaSuper", "JustScript"],
+        choices: ["a) JavaScript", "b) JavaSuper", "c) JustSmart"],
         answer: 0
     },
     {
         question: "What is the correct way to declare a JavaScript variable?",
-        choices: ["var myVariable", "let myVariable", "const myVariable", "All of the above"],
-        answer: 0
+        choices: ["a) var myVariable", "b) let myVariable", "c) const myVariable", "d) All of the above"],
+        answer: 3
     },
-    // Add more questions
+    { 
+        question: "What does the JavaScript NaN represent?",
+        choices: ["a) Nothing and Null", "b) Not a Number", "c) Negative and None"],
+        answer: 1
+    },
+    {
+        question: "What does the addEventListener method do in JavaScript?",
+        choices: ["a) Adds a new element to the DOM", "b) Adds an event listener to an HTML element", "c) Adds a CSS style to an HTML element"],
+        answer: 1
+    },
+    {
+        question: "What is the output of the following code snippet? console.log(typeof 42);",
+        choices: ["number", "string", "boolean"],
+        answer: 0
+    }
 ];
 
 let questionIndex = 0;

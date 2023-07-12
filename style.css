@@ -4,7 +4,11 @@ h1{
 }
 
 body{
-    display:inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -22,15 +26,15 @@ body{
   }
 
   #choices li {
-    display: flex; /* Enables flexible box layout */
-    align-items: center; /* Vertically centers the content within the box */
+    display: flex; 
+    align-items: center; 
     background-color:coral;
     font-size: 18px;
     border-radius: 50px;
     width: 300px;
-    padding: 10px; /* Adds padding inside the box */
-    border: 1px solid #55dd5a; /* Adds a border around the box */
-    margin-bottom: 5px; /* Adds some space between the boxes */
+    padding: 10px; 
+    border: 1px solid #55dd5a; 
+    margin-bottom: 5px; 
   }
  
   #choices li:hover {
