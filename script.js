@@ -33,7 +33,7 @@ const questions = [
     },
     {
         question: "What is the output of the following code snippet? console.log(typeof 42);",
-        choices: ["number", "string", "boolean"],
+        choices: ["a) number", "b) string", "c) boolean"],
         answer: 0
     }
 ];
