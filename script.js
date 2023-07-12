@@ -21,7 +21,7 @@ const questions = [
         choices: ["a) var myVariable", "b) let myVariable", "c) const myVariable", "d) All of the above"],
         answer: 3
     },
-    { 
+    {
         question: "What does the JavaScript NaN represent?",
         choices: ["a) Nothing and Null", "b) Not a Number", "c) Negative and None"],
         answer: 1
@@ -83,10 +83,10 @@ function checkAnswer(selectedAnswer) {
 
     if (selectedAnswer === currentQuestion.answer) {
         score++;
-        feedbackEl.textContent = 'Correct!';
+        feedbackEl.textContent = 'Correct! ✔️';
     } else {
         timer -= 10;
-        feedbackEl.textContent = 'Wrong!';
+        feedbackEl.textContent = 'Wrong! ❌';
     }
 
     questionIndex++;
@@ -113,7 +113,7 @@ function startTimer() {
 function endQuiz() {
     clearInterval(timerId);
     questionEl.textContent = '';
-    choicesElinnerHTML = '';
+    choicesEl.innerHTML = '';
     feedbackEl.textContent = `Quiz Over! Your score: ${score}`;
 
     const initials = prompt('Enter your initials:');
