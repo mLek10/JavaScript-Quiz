@@ -109,16 +109,20 @@ function startTimer() {
         }
     }, 1000);
 }
-
+//prompt at end of quiz
 function endQuiz() {
     clearInterval(timerId);
     questionEl.textContent = '';
     choicesEl.innerHTML = '';
     feedbackEl.textContent = `Quiz Over! Your score: ${score}`;
-
+  
     const initials = prompt('Enter your initials:');
+    if (initials === null) {
+      return; // prompt clears without issue
+    }
+    
     saveScore(initials, score);
-}
+  }
 //play again button to refresh
 const playAgainButton = document.getElementById('playAgain');
 
@@ -155,6 +159,6 @@ clearScoresButton.addEventListener('click', function () {
     localStorage.clear();
     displayHighScores();
 });
-
+  
 
 startButton.addEventListener('click', startQuiz);
