@@ -47,6 +47,7 @@ p {
 h3 {
   color: #55dd5a;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: underline;
 }
 
 #question {
