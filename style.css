@@ -8,7 +8,31 @@ h1 {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+
+#clearScores {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 25px;
+  background-color: #55dd5a;
+  border: none;
+  color: blueviolet;
+  padding: 5px 20px;
+  text-align: center;
+  font-weight: bolder;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background-color: blanchedalmond;
@@ -18,6 +42,11 @@ p {
   font-size: 20px;
   font-weight: bold;
   color: #1b72c3;
+}
+
+h3 {
+  color: #55dd5a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #question {
@@ -78,4 +107,26 @@ p {
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+#highScores {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: blueviolet;
+
+}
+
+#playAgain {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 25px;
+  background-color: #55dd5a;
+  border: none;
+  color: blueviolet;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bolder;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }

@@ -9,18 +9,25 @@
 </head>
 
 <body>
-    <h1>JavaScript Quiz</h1>
+    <div id="highscores">
+        <h3>High Scores</h3>
+        <ul id="highScores"></ul>
+        <button id="clearScores">Clear High Scores</button>
+    </div>
+    <main>
+        <h1>JavaScript Quiz</h1>
 
-    <p>Time: <span id="timer">60</span> seconds</p>
+        <p>Time: <span id="timer">60</span> seconds</p>
 
-    <div id="question"></div>
+        <div id="question"></div>
 
-    <ul id="choices"></ul>
+        <ul id="choices"></ul>
 
-    <div id="feedback"></div>
+        <div id="feedback"></div>
 
-    <button id="start">Start Quiz</button>
-
+        <button id="start">Start Quiz</button>
+        <button id="playAgain">Play Again</button>
+    </main>
 
     <script src="script.js"></script>
 </body>

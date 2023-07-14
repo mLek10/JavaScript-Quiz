@@ -48,7 +48,7 @@ const choicesEl = document.getElementById('choices');
 const feedbackEl = document.getElementById('feedback');
 const timerEl = document.getElementById('timer');
 const startButton = document.getElementById('start');
-
+//set button to start and display game
 function startQuiz() {
     startButton.disabled = true;
     questionIndex = 0;
@@ -60,7 +60,7 @@ function startQuiz() {
     startTimer();
 
 }
-
+//list questions to click
 function showQuestion() {
     const currentQuestion = questions[questionIndex];
     questionEl.textContent = currentQuestion.question;
@@ -77,7 +77,7 @@ function showQuestion() {
         });
     });
 }
-
+//determine if question is correct
 function checkAnswer(selectedAnswer) {
     const currentQuestion = questions[questionIndex];
 
@@ -119,11 +119,42 @@ function endQuiz() {
     const initials = prompt('Enter your initials:');
     saveScore(initials, score);
 }
+//play again button to refresh
+const playAgainButton = document.getElementById('playAgain');
 
-function saveScore(initials, score) {
-    localStorage.setItem("score", JSON.stringify(score));
+playAgainButton.addEventListener('click', function () {
+    startQuiz();
+});
+//score display
+function displayHighScores() {
+    const highScoresElement = document.getElementById('highScores');
+    highScoresElement.innerHTML = '';
 
-    console.log(`Initials: ${initials}, Score: ${score}`);
+    for (let i = 0; i < localStorage.length; i++) {
+        const initials = localStorage.key(i);
+        const score = localStorage.getItem(initials);
+
+        const li = document.createElement('li');
+        li.textContent = `${initials}: ${score}`;
+        highScoresElement.appendChild(li);
+    }
 }
+
+displayHighScores();
+//store high scores
+function saveScore(initials, score) {
+    localStorage.setItem(initials, score);
+    console.log(`Initials: ${initials}, Score: ${score}`);
+
+    displayHighScores();
+}
+// clear scores btn
+const clearScoresButton = document.getElementById('clearScores');
+
+clearScoresButton.addEventListener('click', function () {
+    localStorage.clear();
+    displayHighScores();
+});
+
 
 startButton.addEventListener('click', startQuiz);
